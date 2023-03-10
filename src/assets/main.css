@@ -1,0 +1,34 @@
+@import "./base.css";
+/* @import "https://maersk-designsystem.azureedge.net/fonts/latest/maeu/fonts-cdn.css"; */
+/* @import "~@maersk-global/fonts/maeu/fonts.css"; */
+@import "https://maersk-designsystem.azureedge.net/fonts/latest/maeu/fonts-cdn.css";
+
+#app {
+  max-width: 100%;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}

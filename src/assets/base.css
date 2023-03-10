@@ -1,0 +1,319 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  /* min-height: 100vh; */
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  /* font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
+  font-family: "Maersk Text", -apple-system, BlinkMacSystemFont, "Microsoft JhengHei",
+    "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content-group {
+  display: flow-root;
+}
+
+.left-content {
+  display: flex;
+  float: left;
+}
+
+.right-content {
+  display: flex;
+  gap: 10px;
+  float: right;
+}
+
+.first-bg-color {
+  background: #f7f7f7;
+}
+
+.second-bg-color {
+  background: #FFFFFF;
+}
+
+.grid-template-20-80 {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  padding: 20px 0px 20px 0px;
+}
+
+.grid-template-100 {
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 20px 0px 20px 0px;
+}
+
+.grid-template-20-77 {
+  display: grid;
+  grid-template-columns: 20% 77%;
+  padding: 20px 0px 20px 0px;
+}
+
+thead th {
+  background: #00243d !important;
+  color: white !important;
+  font-weight: 100 !important;
+}
+
+.border-rd-6 {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+.border-1-52 {
+  border: 1.52px solid rgba(0, 0, 0, 0.3) !important;
+}
+
+.p-20 {
+  padding: 20px !important;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.ptb-20 {
+  padding: 20px 0px;
+}
+
+.pt-22-pb-20 {
+  padding: 22px 0px 20px;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+
+.top-20 {
+  top: 20px;
+}
+
+.mtb-20 {
+  margin: 20px 0px;
+}
+
+tbody td a {
+  color: #1685c7 !important;
+  background-color: transparent !important;
+}
+
+.cat-font {
+  font-style: var(--mdt-brand-font--display-2-font-style);
+}
+
+.p0 {
+  padding: 0px;
+}
+
+.f14 {
+  font-size: 14px;
+}
+
+.f16 {
+  font-size: 16px;
+}
+
+.f18 {
+  font-size: 18px;
+}
+
+.f20 {
+  font-size: 20px;
+}
+
+.f22 {
+  font-size: 22px;
+}
+
+.p0 {
+  padding: 0px !important;
+}
+
+.fbolder {
+  font-weight: bolder;
+}
+
+.fnormal {
+  font-weight: normal;
+}
+
+.text-wrap {
+  flex-wrap: wrap;
+}
+
+.t-center {
+  text-align: center !important;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mtb-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* //Pagination section */
+.pagination-content {
+  left: -18px;
+}
+
+.user-pagination {
+  padding: 20px;
+  align-items: center;
+  left: 0%;
+}
+
+.step-indicator-flex {
+  margin-left: 300px;
+  margin-right: 300px;
+  padding: 20px;
+}
+
+.word-break {
+  word-break: break-all;
+}
+
+.footer-button-group {
+  display: flex;
+  gap: 10px;
+  /* padding-top: 10px; */
+}
+
+.list-view {
+  list-style: none;
+  text-align: left;
+}
+
+.text-black {
+  color: black;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.competency-containe-table {
+  display: table;
+  width: 100%;
+}
+
+.half-left {
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+
+.half-right {
+  float: right;
+}
+
+.mds-font--display-2,
+.mds-rich-text h3:not(.mds-font--display-1):not(.mds-font--display-3):not(.mds-font--display-4):not(.mds-font--display-5) {
+  font-size: 16px;
+}
+
+.mds-font--display-2,
+.mds-rich-text h3:not(.mds-font--display-1):not(.mds-font--display-3):not(.mds-font--display-4):not(.mds-font--display-5) {
+  font-size: 22px;
+}
